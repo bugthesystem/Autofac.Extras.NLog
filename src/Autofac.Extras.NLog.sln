@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.NLog", "Autofac.Extras.NLog\Autofac.Extras.NLog.csproj", "{28D87948-C7FD-4D27-9DA9-A4FBCB2A66F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.NLog.Tests", "Autofac.Extras.NLog.Tests\Autofac.Extras.NLog.Tests.csproj", "{6517C32E-A709-4B98-97F2-81A1C06A908E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28D87948-C7FD-4D27-9DA9-A4FBCB2A66F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28D87948-C7FD-4D27-9DA9-A4FBCB2A66F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28D87948-C7FD-4D27-9DA9-A4FBCB2A66F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28D87948-C7FD-4D27-9DA9-A4FBCB2A66F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6517C32E-A709-4B98-97F2-81A1C06A908E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6517C32E-A709-4B98-97F2-81A1C06A908E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6517C32E-A709-4B98-97F2-81A1C06A908E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6517C32E-A709-4B98-97F2-81A1C06A908E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
