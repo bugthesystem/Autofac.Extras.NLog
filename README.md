@@ -1,6 +1,6 @@
 ##Autofac Loggging Module for NLog
 
-Nuget package [available](https://www.nuget.org/packages/Autofac.Extras.NLog/), to install package, run the following command;
+Nuget package [available](https://www.nuget.org/packages/Autofac.Extras.NLog/), to install package run the following command;
 
 ```csharp
 Install-Package Autofac.Extras.NLog
