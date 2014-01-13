@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using NLog;
+using NUnit.Framework;
 
 namespace Autofac.Extras.NLog.Tests
 {
@@ -9,23 +10,25 @@ namespace Autofac.Extras.NLog.Tests
         {
             ContainerBuilder containerBuilder = new ContainerBuilder();
             containerBuilder.RegisterModule<LoggingModule>();
-            containerBuilder.RegisterType<SampleHandlerWithConstructorDependency>().Keyed<ISampleHandler>("constructor");
-            containerBuilder.RegisterType<SampleHandlerWithPropertyDependency>().Keyed<ISampleHandler>("property");
+            containerBuilder.RegisterType<SampleClassWithConstructorDependency>().Keyed<ISampleClass>("constructor");
+            containerBuilder.RegisterType<SampleClassWithPropertyDependency>().Keyed<ISampleClass>("property");
             _container = containerBuilder.Build();
         }
 
         [Test]
         public void Inject_Logger_To_Constructor_Test()
         {
-            ISampleHandler sampleHandler = _container.ResolveKeyed<ISampleHandler>("constructor");
-            sampleHandler.SampleMessage("test");
+            ISampleClass sampleClass = _container.ResolveKeyed<ISampleClass>("constructor");
+
+            Assert.NotNull(sampleClass.GetLogger());
         }
-        
+
         [Test]
         public void Inject_Logger_To_Property_Test()
         {
-            ISampleHandler sampleHandler = _container.ResolveKeyed<ISampleHandler>("property");
-            sampleHandler.SampleMessage("test");
+            ISampleClass sampleClass = _container.ResolveKeyed<ISampleClass>("property");
+
+            Assert.NotNull(sampleClass.GetLogger());
         }
     }
 }
