@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>Autofac.Extras.NLog</id>
+		<version>1.0</version>
+		<authors>ziyasal</authors>
+		<owners>ziyasal</owners>
+		<projectUrl>https://github.com/ziyasal/Autofac.Extras.NLog</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Autofac Module that integrating Autofac and NLog, it supports both constructor and property injection.</description>
+		<summary>Autofac Module that integrating Autofac and NLog, it supports both constructor and property injection.</summary>
+		<tags>NLog Autofac Logger ILogger log logging</tags>
+		<dependencies>
+			<dependency id="Autofac" version="2.2.4.900" />
+			<dependency id="NLog" version="1.0.0.505" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="bin\Release\4.0\Autofac.Extras.NLog.dll" target="lib\net40\Autofac.Extras.NLog.dll" />
+		<file src="bin\Release\4.5\Autofac.Extras.NLog.dll" target="lib\net45\Autofac.Extras.NLog.dll" />
+	</files>
+</package>

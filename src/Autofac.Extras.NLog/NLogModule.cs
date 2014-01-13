@@ -5,7 +5,7 @@ using NLog;
 
 namespace Autofac.Extras.NLog
 {
-    public class LoggingModule : Module
+    public class NLogModule : Module
     {
         private static void InjectLoggerProperties(object instance)
         {
@@ -16,12 +16,12 @@ namespace Autofac.Extras.NLog
             // here's where you'd do it.
             var properties = instanceType
               .GetProperties(BindingFlags.Public | BindingFlags.Instance)
-              .Where(p => p.PropertyType == typeof(Logger) && p.CanWrite && p.GetIndexParameters().Length == 0);
+              .Where(p => p.PropertyType == typeof(ILogger) && p.CanWrite && p.GetIndexParameters().Length == 0);
 
             // Set the properties located.
             foreach (var propToSet in properties)
             {
-                propToSet.SetValue(instance, LogManager.GetCurrentClassLogger(instanceType), null);
+                propToSet.SetValue(instance, new NLogger(LogManager.GetLogger(instanceType.FullName)), null);
             }
         }
 
@@ -31,8 +31,8 @@ namespace Autofac.Extras.NLog
             e.Parameters = e.Parameters.Union(
                 new[]
                 {
-                    new ResolvedParameter((p, i) => p.ParameterType == typeof (Logger),
-                        (p, i) => LogManager.GetCurrentClassLogger())
+                    new ResolvedParameter((p, i) => p.ParameterType == typeof (ILogger),
+                        (p, i) => new NLogger(LogManager.GetLogger(t.FullName)))
                 });
         }
 
