@@ -2,6 +2,9 @@
 using System.Reflection;
 using Autofac.Core;
 using NLog;
+// ReSharper disable RedundantUsingDirective
+using Module = Autofac.Module;
+// ReSharper restore RedundantUsingDirective
 
 namespace Autofac.Extras.NLog
 {
