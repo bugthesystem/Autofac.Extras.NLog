@@ -18,6 +18,6 @@
 	<files>
 		<file src="..\BuildArtifacts\Release\4.0\Autofac.Extras.NLog.dll" target="lib\net40\Autofac.Extras.NLog.dll" />
 		<file src="..\BuildArtifacts\Release\4.5\Autofac.Extras.NLog.dll" target="lib\net45\Autofac.Extras.NLog.dll" />
-		<file src="..\BuildArtifacts\Release\4.5.1\Autofac.Extras.NLog.dll" target="lib\net45\Autofac.Extras.NLog.dll" />
+		<file src="..\BuildArtifacts\Release\4.5.1\Autofac.Extras.NLog.dll" target="lib\net451\Autofac.Extras.NLog.dll" />
 	</files>
 </package>
