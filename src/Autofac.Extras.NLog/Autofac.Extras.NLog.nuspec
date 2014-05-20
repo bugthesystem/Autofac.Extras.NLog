@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
 		<id>Autofac.Extras.NLog</id>
-		<version>1.1</version>
+		<version>1.2</version>
 		<authors>ziyasal</authors>
 		<owners>ziyasal</owners>
 		<projectUrl>https://github.com/ziyasal/Autofac.Extras.NLog</projectUrl>
@@ -16,7 +16,8 @@
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="bin\Release\4.0\Autofac.Extras.NLog.dll" target="lib\net40\Autofac.Extras.NLog.dll" />
-		<file src="bin\Release\4.5\Autofac.Extras.NLog.dll" target="lib\net45\Autofac.Extras.NLog.dll" />
+		<file src="..\BuildArtifacts\Release\4.0\Autofac.Extras.NLog.dll" target="lib\net40\Autofac.Extras.NLog.dll" />
+		<file src="..\BuildArtifacts\Release\4.5\Autofac.Extras.NLog.dll" target="lib\net45\Autofac.Extras.NLog.dll" />
+		<file src="..\BuildArtifacts\Release\4.5.1\Autofac.Extras.NLog.dll" target="lib\net45\Autofac.Extras.NLog.dll" />
 	</files>
 </package>
