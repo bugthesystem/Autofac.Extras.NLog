@@ -18,5 +18,8 @@ namespace Autofac.Extras.NLog
 
         void Fatal(string message);
         void FatalException(string message, Exception exception);
+
+        void Trace(string message);
+        void TraceException(string message, Exception exception);
     }
 }

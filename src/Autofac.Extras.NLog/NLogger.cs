@@ -63,6 +63,16 @@ namespace Autofac.Extras.NLog
         {
             _logger.FatalException(message, exception);
         }
+
+        public void Trace(string message)
+        {
+            _logger.Trace(message);
+        }
+
+        public void TraceException(string message, Exception exception)
+        {
+            _logger.TraceException(message, exception);
+        }
         #endregion
     }
 }
