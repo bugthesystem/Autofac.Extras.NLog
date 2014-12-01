@@ -21,7 +21,7 @@ Container _container = containerBuilder.Build();
 * Constructor sample
 
 ```csharp
-public class SampleClassWithConstructorDependency : ISampleClass
+public class SampleClassWithConstructorDependency : ISampleInterface
 {
     private readonly ILogger _logger;
 
@@ -34,7 +34,7 @@ public class SampleClassWithConstructorDependency : ISampleClass
 * Property Sample
 
 ```csharp  
-public class SampleClassWithPropertyDependency : ISampleClass
+public class SampleClassWithPropertyDependency : ISampleInterface
 {
    public ILogger Logger { get; set; }
 }
