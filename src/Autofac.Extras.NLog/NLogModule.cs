@@ -24,7 +24,7 @@ namespace Autofac.Extras.NLog
             // Set the properties located.
             foreach (var propToSet in properties)
             {
-                propToSet.SetValue(instance, new NLogger(LogManager.GetLogger(instanceType.FullName)), null);
+                propToSet.SetValue(instance, new LoggerAdapter(LogManager.GetLogger(instanceType.FullName)), null);
             }
         }
 
@@ -35,7 +35,7 @@ namespace Autofac.Extras.NLog
                 new[]
                 {
                     new ResolvedParameter((p, i) => p.ParameterType == typeof (ILogger),
-                        (p, i) => new NLogger(LogManager.GetLogger(t.FullName)))
+                        (p, i) => new LoggerAdapter(LogManager.GetLogger(t.FullName)))
                 });
         }
 
