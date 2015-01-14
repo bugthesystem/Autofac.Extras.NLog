@@ -24,7 +24,7 @@ namespace Autofac.Extras.NLog
         /// <summary>
         /// Occurs when logger configuration changes.
         /// </summary>
-        public event LoggerReconfiguredDelegate LoggerReconfigured
+        public event EventHandler<EventArgs> LoggerReconfigured
         {
             add { _logger.LoggerReconfigured += value; }
             remove { _logger.LoggerReconfigured -= value; }
@@ -74,7 +74,7 @@ namespace Autofac.Extras.NLog
 
         public void LogException(LogLevel level, string message, Exception exception)
         {
-            _logger.LogException(level, message, exception);
+            _logger.Log(level, message, exception);
         }
 
         public void Log(LogLevel level, IFormatProvider formatProvider, string message, params object[] args)

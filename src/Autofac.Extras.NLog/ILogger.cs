@@ -14,7 +14,7 @@ namespace Autofac.Extras.NLog
         /// <summary>
         /// Occurs when logger configuration changes.
         /// </summary>
-        event LoggerReconfiguredDelegate LoggerReconfigured;
+        event EventHandler<EventArgs> LoggerReconfigured;
 
         /// <summary>
         /// Gets the name of the logger.
