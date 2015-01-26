@@ -1,5 +1,7 @@
 ##Autofac Loggging Module for NLog
 
+[![Build status](https://ci.appveyor.com/api/projects/status/rutfw487lxos7p2e?svg=true)](https://ci.appveyor.com/project/ziyasal/autofac-extras-nlog)
+
 Nuget package [available](https://www.nuget.org/packages/Autofac.Extras.NLog/), to install run the following command;
 
 ```csharp
