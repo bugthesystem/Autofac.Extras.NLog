@@ -10,7 +10,7 @@ Install-Package Autofac.Extras.NLog
 
 ###Register NLogModule to Autofac
 
-``It attaches to Component Registration and creates logger for requested type.``
+**``It attaches to Component Registration and creates logger for requested type.``**
 ```csharp
 containerBuilder.RegisterModule<NLogModule>();
 ```
