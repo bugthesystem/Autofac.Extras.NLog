@@ -10,15 +10,17 @@ Install-Package Autofac.Extras.NLog
 
 ###Register NLogModule to Autofac
 
+** It attaches to Component Registration and creates logger for requested type. **
 ```csharp
-ContainerBuilder containerBuilder = new ContainerBuilder();
-   
 containerBuilder.RegisterModule<NLogModule>();
-  
-Container _container = containerBuilder.Build();
 ```
 
-###It supports both constructor and property injection.
+###Register SimpleNLogModule to Autofac
+```csharp
+containerBuilder.RegisterModule<SimpleNLogModule>();
+```
+
+###Both NLogModule and SimpleNLogModule supports both constructor and property injection.
 
 * Constructor sample
 
@@ -40,4 +42,18 @@ public class SampleClassWithPropertyDependency : ISampleInterface
 {
    public ILogger Logger { get; set; }
 }
+```
+
+* Service Locator Sample
+
+```csharp  
+ public class SampleClassToResolveLoggerFromServiceLocator : ISampleClass
+    {
+        private readonly ILogger _logger;
+        
+        public SampleClassToResolveLoggerFromServiceLocator(ILifetimeScope serviceLocator)
+        {
+            _logger = serviceLocator.Resolve<ILogger>();
+        }
+    }
 ```
