@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace Autofac.Extras.NLog.Tests
 {
-    public class NLogModuleTests : TestBase
+    public class SimpleNLogModuleTests : TestBase
     {
         private IContainer _container;
         protected override void FinalizeSetUp()
@@ -14,9 +14,22 @@ namespace Autofac.Extras.NLog.Tests
         private void BuildSampleContainer()
         {
             ContainerBuilder containerBuilder = new ContainerBuilder();
-            containerBuilder.RegisterModule<NLogModule>();
-            containerBuilder.RegisterType<SampleClassWithConstructorDependency>().Named<ISampleClass>("constructor");
-            containerBuilder.RegisterType<SampleClassWithPropertyDependency>().Named<ISampleClass>("property");
+
+            containerBuilder.RegisterModule<SimpleNLogModule>();
+
+            containerBuilder
+                .RegisterType<SampleClassWithConstructorDependency>()
+                .Named<ISampleClass>("constructor");
+
+            containerBuilder
+                .RegisterType<SampleClassWithPropertyDependency>()
+                .Named<ISampleClass>("property")
+                .PropertiesAutowired();
+
+            containerBuilder
+                .RegisterType<SampleClassToResolveLoggerFromServiceLocator>()
+                .Named<ISampleClass>("serviceLocator");
+
             _container = containerBuilder.Build();
         }
 
@@ -32,6 +45,14 @@ namespace Autofac.Extras.NLog.Tests
         public void Inject_Logger_To_Property_Test()
         {
             ISampleClass sampleClass = _container.Resolve<ISampleClass>("property");
+
+            Assert.NotNull(sampleClass.GetLogger());
+        }
+
+        [Test]
+        public void Resolve_Logger_From_LifetimeScope_Test()
+        {
+            ISampleClass sampleClass = _container.Resolve<ISampleClass>("serviceLocator");
 
             Assert.NotNull(sampleClass.GetLogger());
         }
