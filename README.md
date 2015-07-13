@@ -16,6 +16,7 @@ containerBuilder.RegisterModule<NLogModule>();
 ```
 
 ###Register SimpleNLogModule to Autofac
+**`` It is useful when ILogger resolved from Service Locator. ``**
 ```csharp
 containerBuilder.RegisterModule<SimpleNLogModule>();
 ```
