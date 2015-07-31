@@ -6,14 +6,14 @@ namespace Autofac.Extras.NLog
     public class NullLogger :ILogger
     {
         public event EventHandler<EventArgs> LoggerReconfigured;
-        public string Name { get; }
-        public LogFactory Factory { get; }
-        public bool IsTraceEnabled { get; }
-        public bool IsDebugEnabled { get; }
-        public bool IsInfoEnabled { get; }
-        public bool IsWarnEnabled { get; }
-        public bool IsErrorEnabled { get; }
-        public bool IsFatalEnabled { get; }
+        public string Name { get; set; }
+        public LogFactory Factory { get; set; }
+        public bool IsTraceEnabled { get; set; }
+        public bool IsDebugEnabled { get; set; }
+        public bool IsInfoEnabled { get; set; }
+        public bool IsWarnEnabled { get; set; }
+        public bool IsErrorEnabled { get; set; }
+        public bool IsFatalEnabled { get; set; }
 
         public bool IsEnabled(LogLevel level)
         {
