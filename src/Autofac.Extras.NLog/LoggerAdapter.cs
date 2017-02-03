@@ -74,7 +74,7 @@ namespace Autofac.Extras.NLog
 
         public void LogException(LogLevel level, string message, Exception exception)
         {
-            _logger.Log(level, message, exception);
+            _logger.Log(level, exception, message);
         }
 
         public void Log(LogLevel level, IFormatProvider formatProvider, string message, params object[] args)
@@ -133,7 +133,7 @@ namespace Autofac.Extras.NLog
         }
         public void Trace(string message, Exception exception)
         {
-            _logger.Trace(message, exception);
+            _logger.Trace(exception, message);
         }
 
         public void Trace(IFormatProvider formatProvider, string message, params object[] args)
@@ -193,7 +193,7 @@ namespace Autofac.Extras.NLog
 
         public void Debug(string message, Exception exception)
         {
-            _logger.Debug(message, exception);
+            _logger.Debug(exception, message);
         }
 
         public void Debug(IFormatProvider formatProvider, string message, params object[] args)
@@ -253,7 +253,7 @@ namespace Autofac.Extras.NLog
 
         public void Info(string message, Exception exception)
         {
-            _logger.Info(message, exception);
+            _logger.Info(exception, message);
         }
 
         public void Info(IFormatProvider formatProvider, string message, params object[] args)
@@ -313,7 +313,7 @@ namespace Autofac.Extras.NLog
 
         public void Warn(string message, Exception exception)
         {
-            _logger.Warn(message, exception);
+            _logger.Warn(exception, message);
         }
 
         public void Warn(IFormatProvider formatProvider, string message, params object[] args)
@@ -373,7 +373,7 @@ namespace Autofac.Extras.NLog
 
         public void Error(string message, Exception exception)
         {
-            _logger.Error(message, exception);
+            _logger.Error(exception, message);
         }
 
         public void Error(IFormatProvider formatProvider, string message, params object[] args)
@@ -433,7 +433,7 @@ namespace Autofac.Extras.NLog
 
         public void Fatal(string message, Exception exception)
         {
-            _logger.Fatal(message, exception);
+            _logger.Fatal(exception,message);
         }
 
         public void Fatal(IFormatProvider formatProvider, string message, params object[] args)

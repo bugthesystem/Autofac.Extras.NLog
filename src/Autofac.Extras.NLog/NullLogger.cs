@@ -470,5 +470,10 @@ namespace Autofac.Extras.NLog
         {
             
         }
+
+        protected virtual void OnLoggerReconfigured()
+        {
+            LoggerReconfigured?.Invoke(this, EventArgs.Empty);
+        }
     }
 }
