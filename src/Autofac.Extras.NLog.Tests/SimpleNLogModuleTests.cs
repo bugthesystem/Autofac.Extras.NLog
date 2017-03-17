@@ -1,14 +1,13 @@
-﻿using Autofac.Core;
-using Autofac.Core.Activators.Reflection;
-using Common.Testing.NUnit;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Autofac.Extras.NLog.Tests
 {
-    public class SimpleNLogModuleTests : TestBase
+    public class SimpleNLogModuleTests
     {
         private IContainer _container;
-        protected override void FinalizeSetUp()
+
+        [SetUp]
+        protected void Init()
         {
             BuildSampleContainer();
         }
