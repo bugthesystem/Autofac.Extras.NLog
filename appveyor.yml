@@ -1,4 +1,5 @@
 configuration: Release
+
 branches:
   only:
     - master
@@ -7,7 +8,7 @@ before_build:
   - nuget restore src/Autofac.Extras.NLog.sln
 
 build:
-  project: src/Autofac.Extras.NLog.sln      
+  project: src/Autofac.Extras.NLog.sln
   verbosity: minimal
   
 test:
