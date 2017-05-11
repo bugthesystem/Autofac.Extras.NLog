@@ -1,4 +1,4 @@
-##Autofac Loggging Module for NLog
+## Autofac Loggging Module for NLog
 
 [![Build status](https://ci.appveyor.com/api/projects/status/rutfw487lxos7p2e?svg=true)](https://ci.appveyor.com/project/ziyasal/autofac-extras-nlog)
 
@@ -8,20 +8,20 @@ Nuget package [available](https://www.nuget.org/packages/Autofac.Extras.NLog/), 
 Install-Package Autofac.Extras.NLog
 ```
 
-###Register NLogModule to Autofac
+### Register NLogModule to Autofac
 
 **``It attaches to Component Registration and creates logger for requested type.``**
 ```csharp
 containerBuilder.RegisterModule<NLogModule>();
 ```
 
-###Register SimpleNLogModule to Autofac
+### Register SimpleNLogModule to Autofac
 **`` It is useful when ILogger resolved from Service Locator. ``**
 ```csharp
 containerBuilder.RegisterModule<SimpleNLogModule>();
 ```
 
-####NLogModule and SimpleNLogModule supports both constructor and property injection.
+#### NLogModule and SimpleNLogModule supports both constructor and property injection.
 
 * Constructor sample
 
