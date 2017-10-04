@@ -30,7 +30,6 @@ namespace Autofac.Extras.NLog
             remove { _logger.LoggerReconfigured -= value; }
         }
 
-
         public string Name { get { return _logger.Name; } }
 
         public LogFactory Factory { get { return _logger.Factory; } }
@@ -131,6 +130,7 @@ namespace Autofac.Extras.NLog
         {
             _logger.Trace(formatProvider, value);
         }
+
         public void Trace(string message, Exception exception)
         {
             _logger.Trace(exception, message);
