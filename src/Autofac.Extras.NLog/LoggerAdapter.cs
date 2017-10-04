@@ -136,6 +136,16 @@ namespace Autofac.Extras.NLog
             _logger.Trace(exception, message);
         }
 
+        public void Trace(Exception exception, string message, params object[] args)
+        {
+            _logger.Trace(exception, message);
+        }
+
+        public void Trace(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+            _logger.Trace(exception, formatProvider, message, args);
+        }
+
         public void Trace(IFormatProvider formatProvider, string message, params object[] args)
         {
             _logger.Trace(formatProvider, message, args);
@@ -194,6 +204,16 @@ namespace Autofac.Extras.NLog
         public void Debug(string message, Exception exception)
         {
             _logger.Debug(exception, message);
+        }
+
+        public void Debug(Exception exception, string message, params object[] args)
+        {
+            _logger.Debug(exception, message, args);
+        }
+
+        public void Debug(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+            _logger.Debug(exception, formatProvider, message, args);
         }
 
         public void Debug(IFormatProvider formatProvider, string message, params object[] args)
@@ -256,6 +276,16 @@ namespace Autofac.Extras.NLog
             _logger.Info(exception, message);
         }
 
+        public void Info(Exception exception, string message, params object[] args)
+        {
+            _logger.Info(exception, message, args);
+        }
+
+        public void Info(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+            _logger.Info(exception, formatProvider, message, args);
+        }
+
         public void Info(IFormatProvider formatProvider, string message, params object[] args)
         {
             _logger.Info(formatProvider, message, args);
@@ -314,6 +344,16 @@ namespace Autofac.Extras.NLog
         public void Warn(string message, Exception exception)
         {
             _logger.Warn(exception, message);
+        }
+
+        public void Warn(Exception exception, string message, params object[] args)
+        {
+            _logger.Warn(exception, message, args);
+        }
+
+        public void Warn(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+            _logger.Warn(exception, formatProvider, message, args);
         }
 
         public void Warn(IFormatProvider formatProvider, string message, params object[] args)
@@ -376,6 +416,16 @@ namespace Autofac.Extras.NLog
             _logger.Error(exception, message);
         }
 
+        public void Error(Exception exception, string message, params object[] args)
+        {
+            _logger.Error(exception, message, args);
+        }
+
+        public void Error(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+            _logger.Error(exception, formatProvider, message, args);
+        }
+
         public void Error(IFormatProvider formatProvider, string message, params object[] args)
         {
             _logger.Error(formatProvider, message, args);
@@ -434,6 +484,16 @@ namespace Autofac.Extras.NLog
         public void Fatal(string message, Exception exception)
         {
             _logger.Fatal(exception,message);
+        }
+
+        public void Fatal(Exception exception, string message, params object[] args)
+        {
+            _logger.Fatal(exception, message, args);
+        }
+
+        public void Fatal(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+            _logger.Fatal(exception, formatProvider, message, args);
         }
 
         public void Fatal(IFormatProvider formatProvider, string message, params object[] args)

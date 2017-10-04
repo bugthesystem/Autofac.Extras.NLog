@@ -108,6 +108,16 @@ namespace Autofac.Extras.NLog
             
         }
 
+        public void Trace(Exception exception, string message, params object[] args)
+        {
+
+        }
+
+        public void Trace(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+
+        }
+
         public void Trace(IFormatProvider formatProvider, string message, params object[] args)
         {
             
@@ -169,6 +179,16 @@ namespace Autofac.Extras.NLog
         public void Debug(string message, Exception exception)
         {
             
+        }
+
+        public void Debug(Exception exception, string message, params object[] args)
+        {
+
+        }
+
+        public void Debug(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+
         }
 
         public void Debug(IFormatProvider formatProvider, string message, params object[] args)
@@ -234,6 +254,16 @@ namespace Autofac.Extras.NLog
             
         }
 
+        public void Info(Exception exception, string message, params object[] args)
+        {
+
+        }
+
+        public void Info(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+
+        }
+
         public void Info(IFormatProvider formatProvider, string message, params object[] args)
         {
             
@@ -295,6 +325,16 @@ namespace Autofac.Extras.NLog
         public void Warn(string message, Exception exception)
         {
             
+        }
+
+        public void Warn(Exception exception, string message, params object[] args)
+        {
+
+        }
+
+        public void Warn(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+
         }
 
         public void Warn(IFormatProvider formatProvider, string message, params object[] args)
@@ -360,6 +400,16 @@ namespace Autofac.Extras.NLog
             
         }
 
+        public void Error(Exception exception, string message, params object[] args)
+        {
+
+        }
+
+        public void Error(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+
+        }
+
         public void Error(IFormatProvider formatProvider, string message, params object[] args)
         {
             
@@ -421,6 +471,16 @@ namespace Autofac.Extras.NLog
         public void Fatal(string message, Exception exception)
         {
             
+        }
+
+        public void Fatal(Exception exception, string message, params object[] args)
+        {
+
+        }
+
+        public void Fatal(Exception exception, IFormatProvider formatProvider, string message, params object[] args)
+        {
+
         }
 
         public void Fatal(IFormatProvider formatProvider, string message, params object[] args)
