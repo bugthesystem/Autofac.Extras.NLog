@@ -52,11 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILogger.cs" />
-    <Compile Include="LoggerAdapter.cs" />
-    <Compile Include="SimpleNLogModule.cs" />
     <Compile Include="NLogModule.cs" />
-    <Compile Include="NullLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
