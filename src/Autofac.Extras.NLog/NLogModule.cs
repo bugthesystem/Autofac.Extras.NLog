@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using System.Reflection;
-using Autofac.Core;
+﻿using Autofac.Core;
 using NLog;
+using System.Linq;
+using System.Reflection;
 
 namespace Autofac.Extras.NLog
 {
@@ -27,12 +27,12 @@ namespace Autofac.Extras.NLog
 
         private static void OnComponentPreparing(object sender, PreparingEventArgs e)
         {
-            var t = e.Component.Activator.LimitType;
             e.Parameters = e.Parameters.Union(
                 new[]
                 {
-                    new ResolvedParameter((p, i) => p.ParameterType == typeof (ILogger),
-                        (p, i) => LogManager.GetLogger(t.FullName))
+                    new ResolvedParameter(
+                        (p, i) => p.ParameterType == typeof (ILogger),
+                        (p, i) => LogManager.GetLogger(p.Member.DeclaringType.FullName))
                 });
         }
 
