@@ -1,4 +1,6 @@
-﻿namespace Autofac.Extras.NLog.Tests
+﻿using NLog;
+
+namespace Autofac.Extras.NLog.Tests
 {
     public class SampleClassWithPropertyDependency : ISampleClass
     {

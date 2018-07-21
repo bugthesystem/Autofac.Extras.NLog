@@ -2,9 +2,6 @@
 using System.Reflection;
 using Autofac.Core;
 using NLog;
-// ReSharper disable RedundantUsingDirective
-using Module = Autofac.Module;
-// ReSharper restore RedundantUsingDirective
 
 namespace Autofac.Extras.NLog
 {
@@ -24,7 +21,7 @@ namespace Autofac.Extras.NLog
             // Set the properties located.
             foreach (var propToSet in properties)
             {
-                propToSet.SetValue(instance, new LoggerAdapter(LogManager.GetLogger(instanceType.FullName)), null);
+                propToSet.SetValue(instance, LogManager.GetLogger(instanceType.FullName), null);
             }
         }
 
@@ -35,7 +32,7 @@ namespace Autofac.Extras.NLog
                 new[]
                 {
                     new ResolvedParameter((p, i) => p.ParameterType == typeof (ILogger),
-                        (p, i) => new LoggerAdapter(LogManager.GetLogger(t.FullName)))
+                        (p, i) => LogManager.GetLogger(t.FullName))
                 });
         }
 

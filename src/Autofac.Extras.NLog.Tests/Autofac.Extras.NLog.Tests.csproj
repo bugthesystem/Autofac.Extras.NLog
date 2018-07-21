@@ -78,7 +78,6 @@
   <ItemGroup>
     <Compile Include="ISampleClass.cs" />
     <Compile Include="SampleClassToResolveLoggerFromServiceLocator.cs" />
-    <Compile Include="SimpleNLogModuleTests.cs" />
     <Compile Include="SampleClassWithConstructorDependency.cs" />
     <Compile Include="SampleClassWithPropertyDependency.cs" />
     <Compile Include="NLogModuleTests.cs" />
