@@ -1,4 +1,5 @@
 ﻿using Autofac.Core;
+using Autofac.Core.Registration;
 using NLog;
 using System.Linq;
 using System.Reflection;
@@ -36,7 +37,7 @@ namespace Autofac.Extras.NLog
                 });
         }
 
-        protected override void AttachToComponentRegistration(IComponentRegistry componentRegistry, IComponentRegistration registration)
+        protected override void AttachToComponentRegistration(IComponentRegistryBuilder componentRegistry, IComponentRegistration registration)
         {
             // Handle constructor parameters.
             registration.Preparing += OnComponentPreparing;
