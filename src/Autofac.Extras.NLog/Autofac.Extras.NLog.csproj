@@ -4,11 +4,11 @@
     <TargetFrameworks>netstandard2.0;net461</TargetFrameworks>
     <AssemblyName>Autofac.Extras.NLog</AssemblyName>
     <RootNamespace>Autofac.Extras.NLog</RootNamespace>
-    <AssemblyVersion>3.0.0.0</AssemblyVersion>
-    <FileVersion>3.0.0.0</FileVersion>
+    <AssemblyVersion>3.0.1.0</AssemblyVersion>
+    <FileVersion>3.0.1.0</FileVersion>
     <Authors>ziyasal,CNBoland</Authors>
     <Company />
-    <Version>3.0.0</Version>
+    <Version>3.0.1</Version>
     <PackageProjectUrl>https://github.com/ziyasal/Autofac.Extras.NLog</PackageProjectUrl>
     <Description>Autofac Module that integrates Autofac and NLog. It supports both constructor and property injection.</Description>
     <PackageTags>NLog Autofac Logger ILogger log logging</PackageTags>
@@ -19,7 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="5.0.0" />
+    <PackageReference Include="Autofac" Version="[5.0.0, 6.0.0)" />
     <PackageReference Include="NLog" Version="4.5.0" />
   </ItemGroup>
 
