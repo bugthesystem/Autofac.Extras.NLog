@@ -15,7 +15,7 @@
     <Copyright>Copyright © 2020</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GeneratePackageOnBuild Condition="'$(Configuration)' == 'Release'">true</GeneratePackageOnBuild>
-    <PackageReleaseNotes>Update NLogModule for compatibility with Autofac 5.x.</PackageReleaseNotes>
+    <PackageReleaseNotes>Update NLogModule for compatibility with Autofac 6.x.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
