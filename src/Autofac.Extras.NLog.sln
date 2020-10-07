@@ -9,10 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.NLog.Tests",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{691806C2-AA46-4AED-B867-74C787EF8F58}"
 	ProjectSection(SolutionItems) = preProject
-		.nuget\Autofac.Extras.NLog.nuspec = .nuget\Autofac.Extras.NLog.nuspec
 		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.ConsoleApp", "Sample.ConsoleApp\Sample.ConsoleApp.csproj", "{DBC0198E-31ED-4690-85F4-FBD5A78135BF}"
