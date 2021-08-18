@@ -1,20 +1,24 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.489
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.NLog", "Autofac.Extras.NLog\Autofac.Extras.NLog.csproj", "{28D87948-C7FD-4D27-9DA9-A4FBCB2A66F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autofac.Extras.NLog", "Autofac.Extras.NLog\Autofac.Extras.NLog.csproj", "{28D87948-C7FD-4D27-9DA9-A4FBCB2A66F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autofac.Extras.NLog.Tests", "Autofac.Extras.NLog.Tests\Autofac.Extras.NLog.Tests.csproj", "{6517C32E-A709-4B98-97F2-81A1C06A908E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Autofac.Extras.NLog.Tests", "Autofac.Extras.NLog.Tests\Autofac.Extras.NLog.Tests.csproj", "{6517C32E-A709-4B98-97F2-81A1C06A908E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{691806C2-AA46-4AED-B867-74C787EF8F58}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
-		.nuget\NuGet.exe = .nuget\NuGet.exe
-		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.ConsoleApp", "Sample.ConsoleApp\Sample.ConsoleApp.csproj", "{DBC0198E-31ED-4690-85F4-FBD5A78135BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.ConsoleApp", "Sample.ConsoleApp\Sample.ConsoleApp.csproj", "{DBC0198E-31ED-4690-85F4-FBD5A78135BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EF214C18-798B-4664-A608-6243EC686804}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		appveyor.yml = appveyor.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

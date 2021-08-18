@@ -1,12 +1,13 @@
-﻿using Common.Testing.NUnit;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
 namespace Autofac.Extras.NLog.Tests
 {
-    public class NLogModuleTests : TestBase
+    public class NLogModuleTests
     {
         private IContainer _container;
-        protected override void FinalizeSetUp()
+
+        [SetUp]
+        public void FinalizeSetUp()
         {
             BuildSampleContainer();
         }
