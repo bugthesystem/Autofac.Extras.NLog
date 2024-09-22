@@ -25,16 +25,14 @@ namespace Autofac.Extras.NLog.Tests
         public void Inject_Logger_To_Constructor_Test()
         {
             ISampleClass sampleClass = _container.ResolveNamed<ISampleClass>("constructor");
-
-            Assert.NotNull(sampleClass.GetLogger());
+            Assert.That(sampleClass.GetLogger(), Is.Not.Null);
         }
 
         [Test]
         public void Inject_Logger_To_Property_Test()
         {
             ISampleClass sampleClass = _container.ResolveNamed<ISampleClass>("property");
-
-            Assert.NotNull(sampleClass.GetLogger());
+            Assert.That(sampleClass.GetLogger(), Is.Not.Null);
         }
     }
 }
